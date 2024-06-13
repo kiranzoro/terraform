@@ -4,7 +4,7 @@ resource "aws_instance" "db"{
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     instance_type = "t2.micro"
 
-    tags = count.index[var.instance_names]
+    tags = var.instance_names[count.index]
 }
 
             #<resource-type>    <resource-name>
