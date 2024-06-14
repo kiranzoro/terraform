@@ -19,3 +19,10 @@ variable "common_tags" {
         Terraform = "true"
     }
 }
+variable "zone_id" {
+    default = "Z09483833FHRDIS9G69I"
+    type = string
+}
+variable "domain_name" {
+    default = "phonestand.in"
+}
