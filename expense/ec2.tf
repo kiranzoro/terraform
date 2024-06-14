@@ -1,4 +1,4 @@
-resource "aws_instance" "db"{
+resource "aws_instance" "expense"{
     ami = "ami-031d574cddc5bb371"
     count = length(var.instance_names)
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
