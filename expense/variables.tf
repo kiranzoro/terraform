@@ -1,28 +1,28 @@
-variable "instance_names" {
-    type = list
-    default = ["db", "backend", "frontend"]
-}
 
-variable "ssh_port" {
-    type = number
-    default = 22
-}
-
-variable "protocol" {
-    type=string
-    default = "tcp"
-}
-variable "common_tags" {
+variable instance_names {
+    type = map
     default = {
-        Project = "Expense"
-        Environment = "Dev"
-        Terraform = "true"
+        db = "t3.small"
+        frontend = "t3.micro"
+        backend = "t3.micro"
     }
 }
-variable "zone_id" {
-    default = "Z09483833FHRDIS9G69I"
-    type = string
+variable "common_tags" {
+    type = map
+    default = {
+        Project = "expense"
+        Terraform = "true"
+    }
+
 }
+
+variable "zone_id" {
+    type = string
+    default= "Z09483833FHRDIS9G69I"
+}
+
 variable "domain_name" {
+    type = string
     default = "phonestand.in"
+
 }
