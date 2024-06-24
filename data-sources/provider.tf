@@ -5,6 +5,7 @@ terraform {
       version = "5.53.0"
     }
   }
+<<<<<<< HEAD
   backend "s3" {
     bucket = "devops-kiran"
     key    = "devops-kiran"
@@ -13,6 +14,9 @@ terraform {
 }
 
 
+=======
+}
+>>>>>>> 2c6e4f2317af14526da93305cf6f3e90f180642b
 #provide authentication
 
 provider "aws" {
